@@ -5,7 +5,7 @@ import { Float, useGLTF, Center } from '@react-three/drei';
 export default function AvatarPlaceholder() {
   const meshRef = useRef();
   // We reference your 'camera.glb' directly from the public folder
-  const { scene } = useGLTF('/camera.glb');
+  const { scene } = useGLTF('/vintage_camera.glb');
 
   useFrame((state, delta) => {
     if (meshRef.current) {
@@ -17,16 +17,16 @@ export default function AvatarPlaceholder() {
   return (
     <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
       <group ref={meshRef}>
-         <Center>
-            <primitive 
-              object={scene} 
-              scale={2.5} 
-            />
-         </Center>
+        <Center>
+          <primitive
+            object={scene}
+            scale={2.5}
+          />
+        </Center>
       </group>
     </Float>
   );
 }
 
 // Preload the model so the LoadingScreen holds until this is ready
-useGLTF.preload('/camera.glb');
+useGLTF.preload('/vintage_camera.glb');

@@ -29,6 +29,14 @@ const TestimonialsSection = () => {
   const next = () => setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
+  // Auto-scroll loop
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-32 bg-black relative z-20 px-6 md:px-12 overflow-hidden border-t border-white/5">
        <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-accent-purple/5 to-transparent pointer-events-none" />

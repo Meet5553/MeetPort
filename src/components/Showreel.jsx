@@ -12,7 +12,7 @@ const Showreel = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <section ref={containerRef} className="relative w-full py-32 bg-black overflow-hidden flex justify-center items-center cursor-pointer group">
+    <section id="showreel" ref={containerRef} className="relative w-full py-32 bg-black overflow-hidden flex justify-center items-center cursor-pointer group">
       <motion.div 
         style={{ scale, opacity }}
         className="w-[90%] md:w-[80%] aspect-video relative rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(147,51,234,0.15)] group-hover:shadow-[0_0_80px_rgba(147,51,234,0.3)] transition-shadow duration-700"

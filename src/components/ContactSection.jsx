@@ -4,7 +4,7 @@ import { Mail, Link, MessageSquare, ArrowUpRight } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section className="py-32 bg-background relative z-20 px-6 md:px-12 border-t border-white/5">
+    <section id="contact" className="py-32 bg-background relative z-20 px-6 md:px-12 border-t border-white/5">
        <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
              

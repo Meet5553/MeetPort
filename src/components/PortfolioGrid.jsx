@@ -21,7 +21,7 @@ const PortfolioGrid = () => {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section className="py-32 bg-background relative z-20 px-6 md:px-12 border-t border-white/5">
+    <section id="portfolio" className="py-32 bg-background relative z-20 px-6 md:px-12 border-t border-white/5">
       <div className="container mx-auto">
         
         <div className="flex flex-col md:flex-row justify-between items-end mb-20">

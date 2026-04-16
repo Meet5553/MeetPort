@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section className="py-24 md:py-40 bg-black relative z-20 px-6 md:px-12 border-t border-white/5 overflow-hidden">
+    <section id="about" className="py-24 md:py-40 bg-black relative z-20 px-6 md:px-12 border-t border-white/5 overflow-hidden">
        {/* Background Glow */}
        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-accent-purple/10 rounded-full blur-[120px] pointer-events-none" />
 

@@ -20,6 +20,18 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (!loading) {
+      const scrollTimer = setTimeout(() => {
+        const showreel = document.getElementById('showreel');
+        if (showreel && window.scrollY < 100) {
+          showreel.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 6000);
+      return () => clearTimeout(scrollTimer);
+    }
+  }, [loading]);
+
   return (
     <Layout>
       <AnimatePresence mode="wait">
